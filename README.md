@@ -7,9 +7,9 @@ You might still think this is favourable over having nothing if you don't want t
 ## Features
 Locally resolves:
 - Artist TopSongs
-	- by weighting favorited, favourably rated and often-played songs higher. If no plays or ratings/favorite are available, it returns the artists newest songs
+	- by weighting favorited, favourably rated and often-played songs higher. If no plays or ratings/favorite are available, it returns the artists newest songs (or skips to next agent if configured)
 - Similar Artists
-	- Checks for any collaborations with other artists. Artists that are collaborated with more often are considered more "similar"
+	- Checks for any collaborations with other artists and appearances on shared albums (f.e. collaborations). Artists that share the same genres are also considered more "similar".
 
 These 2 are needed for "artist radio" etc. (getSimilarSongs)
 

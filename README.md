@@ -13,27 +13,28 @@ Locally resolves:
 
 These 2 are needed for "artist radio" etc. (getSimilarSongs)
 
-## Configuration
+## Usage
 
-### 1. copy plugin file into your pluginfolder
+### 1. Download plugin file and copy into your pluginfolder
 - Download the plugin file from [here](https://github.com/metalheim/navidrome_plugin_local_agent/blob/main/plugin_local_agent.ndp)
 - Copy the `plugin_local_agent.ndp` into your PluginFolder
 
 > [!TIP]
-> Your plugin folder is a folder called "plugins" in your datafolder by default.
+> The default plugin folder is a folder called "plugins" in your datafolder
 
 ### 2. Enable plugins in Navidrome (if not already on):
-navidrome.toml:
+_navidrome.toml:_
 ```toml
 [Plugins]
 	Enabled = true
-	CacheSize = "200MB"           # Compilation cache size limit
 ```
 ### 3. Configure Agent
-navidrome.toml:
+Add `plugin_local_agent` to your `Agents` configuration.
+_navidrome.toml:_
 ```toml
 Agents="plugin_local_agent,deezer,lastfm,spotify,local"
 ```
+
 ### 4. Configure the plugin
 1. In Navidrome WebUI, go to <kbd>plugins</kbd> -> <kbd>plugin_local_agent</kbd>
 2. Plugin itself needs `user` permissions. 

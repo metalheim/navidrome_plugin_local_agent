@@ -16,7 +16,7 @@ These 2 are needed for "artist radio" etc. (getSimilarSongs)
 ## Usage
 
 ### 1. Download plugin file and copy into your pluginfolder
-- Download the plugin file from [here](https://github.com/metalheim/navidrome_plugin_local_agent/blob/main/plugin_local_agent.ndp)
+- Download the plugin file from [here](https://raw.githubusercontent.com/metalheim/navidrome_plugin_local_agent/refs/heads/main/plugin_local_agent.ndp)
 - Copy the `plugin_local_agent.ndp` into your PluginFolder
 
 > [!TIP]

@@ -15,9 +15,12 @@ These 2 are needed for "artist radio" etc. (getSimilarSongs)
 
 ## Configuration
 
-### 1. copy plugin file into your plugifolder
-Copy the `plugin_local_agent.ndp` into your PluginFolder
-Your plugin folder is a folder called "plugins" in your datafolder by default.
+### 1. copy plugin file into your pluginfolder
+- Download the plugin file from [here](https://github.com/metalheim/navidrome_plugin_local_agent/blob/main/plugin_local_agent.ndp)
+- Copy the `plugin_local_agent.ndp` into your PluginFolder
+
+> [!TIP]
+> Your plugin folder is a folder called "plugins" in your datafolder by default.
 
 ### 2. Enable plugins in Navidrome (if not already on):
 navidrome.toml:

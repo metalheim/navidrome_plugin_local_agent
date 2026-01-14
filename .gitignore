@@ -1,0 +1,6 @@
+target
+.git
+.cargo/
+Cargo.lock
+aubio
+plugin.wasm

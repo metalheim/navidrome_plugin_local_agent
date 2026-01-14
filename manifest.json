@@ -1,0 +1,18 @@
+{
+  "name": "Local Metadata Agent",
+  "author": "Stephan Wahlen",
+  "version": "0.0.2",
+  "description": "Provides local metadataAgent functionalities `Artist TopSongs` and `Similar Artists`",
+  "website": "https://github.com/metalheim/plugin_local_agent",
+  "permissions": {
+    "subsonicapi": {
+      "reason": "To get information for artist to base the Similars one"
+    },
+	"users": {
+      "reason": "Using subsonic api requires user permissions"
+    },
+    "configuration": {
+      "reason": "Configure which user the TopSongs results are based on"
+    }
+  }
+}

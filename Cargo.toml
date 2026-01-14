@@ -1,0 +1,16 @@
+[package]
+name = "plugin_local_agent"
+version = "0.0.2"
+edition = "2021"
+description = "Navidrome plugin that provides metadataAgent that works completely local (no external services)"
+authors = ["Stephan Wahlen"]
+license = "Apache 2.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+nd-pdk = { git = "https://github.com/navidrome/navidrome", branch = "new-plugins"}
+extism-pdk = "1.2"
+serde = "1.0"
+serde_json = "1.0"

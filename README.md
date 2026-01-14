@@ -30,6 +30,7 @@ _navidrome.toml:_
 ```
 ### 3. Configure Agent
 Add `plugin_local_agent` to your `Agents` configuration.
+
 _navidrome.toml:_
 ```toml
 Agents="plugin_local_agent,deezer,lastfm,spotify,local"

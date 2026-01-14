@@ -1,7 +1,8 @@
 # Local SimilarArtists and TopSongs Navidrome Metadata Agent as Plugin
 Navidrome plugin written in rust that provides local metadataAgent functionalities.
-Doing it fully local has limits, but might still be favourable over having nothing if you don't want to - or cannot - enable any external services.
-See section #limitations for more details.
+It will use the playcount/ratings/loves data from a navidrome-user of your choice and present you with _your_ Top Songs of an artist.
+Doing it fully local has benefits (privacy, _your_ data), but also has limits. Check section [Limitations](#limitations) for more details.
+You might still think this is favourable over having nothing if you don't want to - or cannot - enable any external services.
 
 ## Features
 Locally resolves:

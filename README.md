@@ -43,20 +43,21 @@ Agents="plugin_local_agent,deezer,lastfm,spotify,local"
 
 ## Limitations
 
-### User behaviour
+### Being single-user
 Plugin uses Navidromes OpenSubsonic API to query the data needed for resolving TopSongs and SimilarArtists.
-This API always needs a `user`. The data for TopSongs takes into consideration user annotations (favorites, playcount, ratings) and is therefore different.
+This API always needs a `user`. The data for TopSongs takes into consideration user annotations (favorites, playcount, ratings) and is therefore different for each user.
 The plugin does not know which user queried for TopSongs, and it can only return TopSongs for one user.
 #### example
-`user A` wants to get TopSongs for `ArtistX` and this user has a few songs of this artist favorited.
-`user A` has all *new* songs of this artist rated 1-star, because he only `ArtistX`s old music.
+`user A` wants to get TopSongs for `ArtistX` and this user has a several old songs of this artist favorited.
+`user A` has all *new* songs of this artist rated 1-star, because he only likes `ArtistX`s old songs.
 
-The plugin has `user B` configured as its data-source. `user B` has not listended to a single song of `ArtistX`
+The plugin has `user B` configured as its data-source. `user B` has _only_ likes `ArtistX`s new songs.
+Therefore the plugin will return `ArtistX`s **new** songs. Which `user A` doesn't like.
 
 ### General shortcomings
-BandA might make very similar music to BandB. But they have never collaborated and never appear on the same album/sampler/whatever.
-The only thing that makes the plugin consider them "similar" is if they use the same genres.
-
+`BandA` might make very similar music to `BandB`. 
+But they have never collaborated and never appear on the same album/sampler/whatever.
+The only thing that makes the plugin consider them "similar" is if they have the same genres tagged in their music.
 
 ## Build the plugin yourself
 

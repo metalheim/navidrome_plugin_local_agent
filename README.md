@@ -1,4 +1,4 @@
-# Local Similar Artists Navidrome Plugin
+# Local SimilarArtists and TopSongs Navidrome Metadata Agent as Plugin
 Navidrome plugin written in rust that provides local metadataAgent functionalities.
 Doing it fully local has limits, but might still be favourable over having nothing if you don't want to - or cannot - enable any external services.
 See section #limitations for more details.

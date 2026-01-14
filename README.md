@@ -42,7 +42,7 @@ Agents="plugin_local_agent,deezer,lastfm,spotify,local"
   - Enable at least 1 user. 
   - If you "Enable access to all users", plugin will use the first admin user it sees.
 3. (optional) set plugin-specific configuration
-  - `user` (optional) configure a specific username that the plugin should use. 
+  - `user` (optional) configure a specific username that the plugin should use (only really makes sense if you "Enable access to all users".
   - `agent_skippable` (optional, default false). Set to `true` if you also use other metadataAgents. If no meaningful topSongs could be found by plugin, it will skip itself and the next metadataAgent is queried for topsongs.
     - Don't configure or set to `false` if you use this plugin as the _only_ metadata agent.
 

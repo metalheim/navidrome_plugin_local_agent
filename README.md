@@ -37,11 +37,11 @@ Agents="plugin_local_agent,deezer,lastfm,spotify,local"
 
 ### 4. Configure the plugin
 In Navidrome WebUI, go to <kbd>plugins</kbd> -> <kbd>plugin_local_agent</kbd>
-1. *Enable Plugin*
-2. *Users Permission*
+1. **Enable Plugin**
+2. **Users Permission**
   - Enable exactly 1 user
   - Alternatively "Allow all users", plugin will use the first admin user it sees
-3. *Configuration*
+3. **Configuration**
 Settings in here are _optional_
   - `Skip Agent if no results` Set to `true` if you also use other metadataAgents
     - If no meaningful topSongs could be found by plugin, it will skip itself and the next metadataAgent is queried for topsongs.

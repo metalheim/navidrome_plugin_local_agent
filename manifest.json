@@ -1,18 +1,41 @@
 {
-  "name": "Local Metadata Agent",
-  "author": "Stephan Wahlen",
-  "version": "0.0.2",
-  "description": "Provides local metadataAgent functionalities `Artist TopSongs` and `Similar Artists`",
-  "website": "https://github.com/metalheim/plugin_local_agent",
-  "permissions": {
-    "subsonicapi": {
-      "reason": "To get information for artist to base the Similars one"
-    },
-	"users": {
-      "reason": "Using subsonic api requires user permissions"
-    },
-    "configuration": {
-      "reason": "Configure which user the TopSongs results are based on"
-    }
-  }
+	"name": "Local Metadata Agent",
+	"author": "Stephan Wahlen",
+	"version": "0.0.2",
+	"description": "Provides local metadataAgent functionalities `Artist TopSongs` and `Similar Artists`",
+	"website": "https://github.com/metalheim/plugin_local_agent",
+	"permissions": {
+		"subsonicapi": {
+			"reason": "To get information for artist to base the Similars one"
+		},
+		"users": {
+			"reason": "Using subsonic api requires user permissions"
+		}
+	},
+	"config": {
+		"schema": {
+			"type": "object",
+			"properties": {
+				"agent_skippable": {
+					"type": "boolean",
+					"title": "Skip Agent if no results",
+					"description": "Set to true if you want to fallback to other metadataAgents",
+					"default": false
+				}
+			}
+		},
+		"uiSchema": {
+			"type": "VerticalLayout",
+			"elements": [
+				{
+					"type": "Control",
+					"scope": "#/properties/agent_skippable",
+					"options": {
+						"toggle": true,
+						"showUnfocusedDescription": true
+					}
+				}
+			]
+		}
+	}
 }

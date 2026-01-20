@@ -39,7 +39,6 @@ impl SimilarArtistsProvider for LocalProvider {
 		info!("Trying to locally resolve Similar Artists to: {}", artist_name);
 		
 		let url = format!("getArtist?u={}&id={}",username,artist_id);
-		
 		debug!("  Calling {}", url);
 		
 		let subsonic_response  = match subsonicapi::call(&url) {
@@ -131,8 +130,8 @@ impl SimilarArtistsProvider for LocalProvider {
 			match genre_name.as_str() {
 				_ => {
 					let url = format!("getAlbumList2?u={}&type=byGenre&genre={}",username,genre_name);
-					
 					debug!("  Calling {}", url);
+					
 					let subsonic_response  = match subsonicapi::call(&url) {
 						Ok(resp) => resp,
 						Err(e) => {
@@ -337,7 +336,7 @@ impl ArtistTopSongsProvider for LocalProvider {
 			return Err(Error::new("No meaningful top songs found (none above weight threshold)"));
 		}
         match serde_json::to_string(&topsongs) {
-            Ok(json) => info!("  Top songs: {}", json),
+            Ok(json) => debug!("  Top songs: {}", json),
             Err(e) => error!("  Could not serialize entries to JSON: {}", e),
         }
 
@@ -360,23 +359,20 @@ impl ArtistTopSongsProvider for LocalProvider {
 // =============================== 
 
 fn get_user_name() -> Option<String> {
-    // 1. Try config username
-    if let Ok((config_username, true)) = config::get("username") {
-        // Check if this username exists among users
-        if let Ok(available_users) = nd_pdk::host::users::get_users() {
-            if available_users.iter().any(|u| u.user_name.to_lowercase() == config_username.to_lowercase()) {
-                return Some(config_username);
-            }
-        }
-    }
-
-    // 2. Fallback: first admin user
+    // 1. first admin user
     if let Ok(admins) = users::get_admins() {
         if let Some(firstadmin) = admins.into_iter().next() {
             return Some(firstadmin.user_name);
         }
     }
 
+    // 2. Fallback: first user
+    if let Ok(users) = users::get_users() {
+        if let Some(firstuser) = users.into_iter().next() {
+            return Some(firstuser.user_name);
+        }
+    }
+	
     // 3. No user found (shouldn't happen as at least 1 admin user is required)
     error!("Couldn't find any user from configuration");
     None

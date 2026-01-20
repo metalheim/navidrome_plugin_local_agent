@@ -1,7 +1,7 @@
 {
 	"name": "Local Metadata Agent",
 	"author": "Stephan Wahlen",
-	"version": "0.0.2",
+	"version": "0.2",
 	"description": "Provides local metadataAgent functionalities `Artist TopSongs` and `Similar Artists`",
 	"website": "https://github.com/metalheim/plugin_local_agent",
 	"permissions": {

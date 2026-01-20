@@ -44,7 +44,8 @@ In Navidrome WebUI, go to <kbd>plugins</kbd> -> <kbd>plugin_local_agent</kbd>
 3. **Configuration**
 > [!NOTE] 
 > Settings in here are _optional_
-  - `Skip Agent if no results` Set to `true` if you also use other metadataAgents
+  - `Skip Agent if no results` 
+    - Set to `true` if you also use other metadataAgents
     - If no meaningful topSongs could be found by plugin, it will skip itself and the next metadataAgent is queried for topsongs.
     - Don't configure or set to `false` if you use this plugin as the _only_ metadata agent.
 
